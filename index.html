@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1020">
+<title>لينكاتي | Linkaty</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+:root{--bg:#080d1b;--panel:#111a2d;--panel2:#17233b;--text:#f4f7ff;--muted:#9eabc4;--line:rgba(255,255,255,.09);--accent:#7c5cff;--cyan:#31d6d0;--shadow:0 20px 60px rgba(0,0,0,.28)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Cairo',sans-serif;background:radial-gradient(ellipse at 80% 0%,rgba(124,92,255,.18),transparent 38%),radial-gradient(ellipse at 0% 55%,rgba(49,214,208,.09),transparent 32%),var(--bg);color:var(--text);min-height:100vh;transition:.25s}
+body.light{--bg:#f3f6ff;--panel:#fff;--panel2:#f7f8ff;--text:#17213a;--muted:#68738c;--line:rgba(24,37,67,.1);--shadow:0 18px 45px rgba(44,58,95,.10);background:radial-gradient(ellipse at 80% 0%,rgba(124,92,255,.12),transparent 38%),#f3f6ff}
+.wrap{width:min(1100px,calc(100% - 36px));margin:auto}
+header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:25px;letter-spacing:-.5px}
+.logo{width:44px;height:44px;border-radius:15px;background:linear-gradient(135deg,var(--accent),#3e9bff);display:grid;place-items:center;box-shadow:0 8px 25px #7c5cff55}
+.logo svg{width:24px;height:24px}
+.actions{display:flex;gap:10px;align-items:center}.icon-btn{border:1px solid var(--line);background:var(--panel);color:var(--text);width:42px;height:42px;border-radius:13px;cursor:pointer;font-size:18px}
+.hero{text-align:center;padding:72px 0 42px}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid rgba(124,92,255,.35);background:rgba(124,92,255,.1);border-radius:30px;color:#b9aaff;font-size:13px;font-weight:700}
+.hero h1{font-size:clamp(42px,8vw,76px);line-height:1.15;margin:20px 0 12px;font-weight:900;letter-spacing:-2px}.gradient{background:linear-gradient(90deg,#9b82ff,#42d9d0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);font-size:17px;margin:0 auto;max-width:600px;line-height:1.9}
+.searchbox{max-width:560px;margin:30px auto 0;position:relative}.searchbox input{width:100%;padding:17px 52px 17px 18px;border-radius:17px;border:1px solid var(--line);background:var(--panel);color:var(--text);font:inherit;outline:none;box-shadow:var(--shadow)}.searchbox input:focus{border-color:var(--accent)}.searchbox span{position:absolute;right:19px;top:14px;font-size:20px;color:var(--muted)}
+.section-head{display:flex;align-items:end;justify-content:space-between;margin:25px 0 18px}.section-head h2{font-size:23px;margin:0;font-weight:800}.section-head p{margin:4px 0 0;color:var(--muted);font-size:13px}.count{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:6px 11px;border-radius:30px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.link-card{position:relative;overflow:hidden;min-height:220px;padding:23px;border:1px solid var(--line);border-radius:23px;background:linear-gradient(145deg,var(--panel),var(--panel2));box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .22s,border-color .22s}.link-card:hover{transform:translateY(-5px);border-color:rgba(124,92,255,.55)}.link-card:before{content:"";position:absolute;width:150px;height:150px;border-radius:50%;background:var(--glow,rgba(124,92,255,.12));filter:blur(35px);left:-55px;top:-65px;pointer-events:none}
+.card-top{display:flex;align-items:center;justify-content:space-between;position:relative}.card-icon{width:54px;height:54px;border-radius:17px;display:grid;place-items:center;font-size:25px;background:var(--iconbg,rgba(124,92,255,.16))}
+.tag{font-size:11px;color:var(--muted);background:rgba(255,255,255,.05);border:1px solid var(--line);padding:5px 9px;border-radius:20px}
+.link-card h3{font-size:19px;margin:19px 0 5px;position:relative}.link-card p{color:var(--muted);font-size:13px;line-height:1.8;margin:0 0 20px;position:relative}
+.card-link{margin-top:auto;display:flex;align-items:center;justify-content:space-between;text-decoration:none;color:var(--text);font-size:13px;font-weight:800;padding-top:13px;border-top:1px solid var(--line);position:relative}.arrow{width:30px;height:30px;border-radius:10px;background:rgba(124,92,255,.18);display:grid;place-items:center;color:#b9aaff;font-size:18px;transition:.2s}.card-link:hover .arrow{transform:translateX(-4px);background:var(--accent);color:white}
+.coming{border-style:dashed;background:linear-gradient(145deg,rgba(49,214,208,.07),var(--panel));}.coming .card-icon{background:rgba(49,214,208,.13)}.coming .tag{color:#55dcd5;border-color:rgba(49,214,208,.22)}.coming .card-link{color:var(--muted)}.coming .arrow{background:rgba(49,214,208,.12);color:#55dcd5}
+.community{margin:44px 0 65px;padding:27px;border:1px solid var(--line);border-radius:25px;background:linear-gradient(115deg,rgba(124,92,255,.13),rgba(49,214,208,.07));display:flex;align-items:center;justify-content:space-between;gap:20px}.community h2{font-size:21px;margin:0 0 5px}.community p{color:var(--muted);margin:0;font-size:13px}.join{white-space:nowrap;text-decoration:none;background:linear-gradient(110deg,#7c5cff,#4a8dff);color:#fff;padding:12px 20px;border-radius:13px;font-size:13px;font-weight:800;box-shadow:0 9px 25px #7c5cff44}
+footer{border-top:1px solid var(--line);padding:23px 0 30px;text-align:center;color:var(--muted);font-size:12px}footer strong{color:var(--text)}
+.empty{display:none;text-align:center;padding:35px;color:var(--muted);grid-column:1/-1}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.hero{padding:55px 0 30px}}
+@media(max-width:560px){.wrap{width:min(100% - 26px,1100px)}header{height:70px}.brand{font-size:21px}.logo{width:39px;height:39px}.hero{padding:48px 0 25px}.hero p{font-size:14px}.grid{grid-template-columns:1fr;gap:13px}.link-card{min-height:195px;padding:20px}.community{align-items:flex-start;flex-direction:column;padding:22px}.join{width:100%;text-align:center}.section-head h2{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand"><div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.1 0l3-3a5 5 0 0 0-7.1-7.1l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.1 0l-3 3A5 5 0 0 0 7 21.1l1.7-1.7"/></svg></div>لينكاتي</div>
+  <div class="actions"><button class="icon-btn" id="themeBtn" aria-label="تغيير الوضع">☀</button></div>
+</header>
+<main>
+<section class="hero">
+  <span class="eyebrow">✦ كل روابطك في مكان واحد</span>
+  <h1>أهلاً بك في <span class="gradient">لينكاتي</span></h1>
+  <p>وجهتك السريعة لكل المنصات والخدمات التعليمية. اختار اللي محتاجه وابدأ رحلتك.</p>
+  <div class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="ابحث عن منصة أو خدمة..." autocomplete="off"></div>
+</section>
+<section>
+  <div class="section-head"><div><h2>روابطنا ومنصاتنا</h2><p>اختصارات مهمة، منظمة علشان توصل أسرع</p></div><span class="count">3 روابط متاحة</span></div>
+  <div class="grid" id="cards">
+    <article class="link-card" data-search="امتحانات منصة امتحانات اختبارات form x elite">
+      <div class="card-top"><div class="card-icon">📝</div><span class="tag">منصة امتحانات</span></div>
+      <h3>منصة امتحانات قوية</h3><p>ادخل إلى منصة الامتحانات وابدأ اختبارك بسهولة.</p>
+      <a class="card-link" href="https://form-x-elite.base44.app/" target="_blank" rel="noopener noreferrer"><span>زيارة المنصة</span><span class="arrow">←</span></a>
+    </article>
+    <article class="link-card" data-search="المنصة الأساسية الرسمية مكتبة boocs">
+      <div class="card-top"><div class="card-icon">🏛️</div><span class="tag">المنصة الرسمية</span></div>
+      <h3>منصتنا الأساسية والرسمية</h3><p>الموقع الرئيسي الخاص بنا، ومكتبتنا التعليمية المعتمدة.</p>
+      <a class="card-link" href="https://boocs-bbcaloria.vercel.app/" target="_blank" rel="noopener noreferrer"><span>زيارة المنصة</span><span class="arrow">←</span></a>
+    </article>
+    <article class="link-card" data-search="كيريو الثقافة المالية البرمجة حل منصة javascript python">
+      <div class="card-top"><div class="card-icon">💻</div><span class="tag">حل المنصات</span></div>
+      <h3>حل منصة كيريو والثقافة المالية</h3><p>الوصول إلى حلول منصة كيريو ومنصة الثقافة المالية.</p>
+      <a class="card-link" href="https://mhmdrmdanalhrbawy03-glitch.github.io/Exam-mohamed-alherbawy/" target="_blank" rel="noopener noreferrer"><span>فتح صفحة الحلول</span><span class="arrow">←</span></a>
+    </article>
+    <article class="link-card" data-search="جروب ثانية بكالوريا واتساب طلاب">
+      <div class="card-top"><div class="card-icon">👥</div><span class="tag">مجتمع الطلاب</span></div>
+      <h3>جروب تانية بكالوريا</h3><p>انضم إلى مجموعة الطلاب على واتساب لمتابعة كل جديد.</p>
+      <a class="card-link" href="https://chat.whatsapp.com/ENBgzShGqNdLmaxt9V8Pny" target="_blank" rel="noopener noreferrer"><span>الانضمام للجروب</span><span class="arrow">←</span></a>
+    </article>
+    <article class="link-card coming" data-search="قناة واتساب قريبا قريباً">
+      <div class="card-top"><div class="card-icon">📢</div><span class="tag">قريباً جداً</span></div>
+      <h3>قناة الواتساب</h3><p>مساحة مخصصة للإعلانات والتنبيهات وآخر التحديثات. انتظرونا قريباً جداً.</p>
+      <div class="card-link"><span>سيتم إضافة الرابط قريباً</span><span class="arrow">…</span></div>
+    </article>
+    <article class="link-card coming" data-search="قناة تلجرام تليجرام telegram قريبا قريباً">
+      <div class="card-top"><div class="card-icon">✈️</div><span class="tag">قريباً جداً</span></div>
+      <h3>قناة التليجرام</h3><p>تابعوا القناة للحصول على الملفات والروابط والتحديثات القادمة.</p>
+      <div class="card-link"><span>سيتم إضافة الرابط قريباً</span><span class="arrow">…</span></div>
+    </article>
+    <div class="empty" id="empty">لا توجد نتائج مطابقة لبحثك.</div>
+  </div>
+</section>
+<section class="community">
+  <div><h2>خليك قريب من مجتمعنا ✨</h2><p>انضم إلى جروب تانية بكالوريا وكن أول من يعرف التحديثات.</p></div>
+  <a class="join" href="https://chat.whatsapp.com/ENBgzShGqNdLmaxt9V8Pny" target="_blank" rel="noopener noreferrer">انضم إلى الجروب الآن ←</a>
+</section>
+</main>
+<footer>© 2026 لينكاتي | جميع الحقوق محفوظة<br><strong>برعاية محمد رمضان الحرباوي</strong></footer>
+</div>
+<script>
+const themeBtn=document.getElementById('themeBtn');
+themeBtn.addEventListener('click',()=>{document.body.classList.toggle('light');themeBtn.textContent=document.body.classList.contains('light')?'☾':'☀';});
+const search=document.getElementById('search'), cards=[...document.querySelectorAll('.link-card')], empty=document.getElementById('empty');
+search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();let shown=0;cards.forEach(card=>{const match=(card.innerText+' '+card.dataset.search).toLowerCase().includes(q);card.style.display=match?'flex':'none';if(match)shown++;});empty.style.display=shown?'none':'block';});
+</script>
+</body>
+</html>
