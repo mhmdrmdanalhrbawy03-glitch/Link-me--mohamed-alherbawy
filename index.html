@@ -1,100 +1,48 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0b1020">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090d19">
 <title>لينكاتي | Linkaty</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
-:root{--bg:#080d1b;--panel:#111a2d;--panel2:#17233b;--text:#f4f7ff;--muted:#9eabc4;--line:rgba(255,255,255,.09);--accent:#7c5cff;--cyan:#31d6d0;--shadow:0 20px 60px rgba(0,0,0,.28)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Cairo',sans-serif;background:radial-gradient(ellipse at 80% 0%,rgba(124,92,255,.18),transparent 38%),radial-gradient(ellipse at 0% 55%,rgba(49,214,208,.09),transparent 32%),var(--bg);color:var(--text);min-height:100vh;transition:.25s}
-body.light{--bg:#f3f6ff;--panel:#fff;--panel2:#f7f8ff;--text:#17213a;--muted:#68738c;--line:rgba(24,37,67,.1);--shadow:0 18px 45px rgba(44,58,95,.10);background:radial-gradient(ellipse at 80% 0%,rgba(124,92,255,.12),transparent 38%),#f3f6ff}
-.wrap{width:min(1100px,calc(100% - 36px));margin:auto}
-header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:25px;letter-spacing:-.5px}
-.logo{width:44px;height:44px;border-radius:15px;background:linear-gradient(135deg,var(--accent),#3e9bff);display:grid;place-items:center;box-shadow:0 8px 25px #7c5cff55}
-.logo svg{width:24px;height:24px}
-.actions{display:flex;gap:10px;align-items:center}.icon-btn{border:1px solid var(--line);background:var(--panel);color:var(--text);width:42px;height:42px;border-radius:13px;cursor:pointer;font-size:18px}
-.hero{text-align:center;padding:72px 0 42px}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid rgba(124,92,255,.35);background:rgba(124,92,255,.1);border-radius:30px;color:#b9aaff;font-size:13px;font-weight:700}
-.hero h1{font-size:clamp(42px,8vw,76px);line-height:1.15;margin:20px 0 12px;font-weight:900;letter-spacing:-2px}.gradient{background:linear-gradient(90deg,#9b82ff,#42d9d0);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{color:var(--muted);font-size:17px;margin:0 auto;max-width:600px;line-height:1.9}
-.searchbox{max-width:560px;margin:30px auto 0;position:relative}.searchbox input{width:100%;padding:17px 52px 17px 18px;border-radius:17px;border:1px solid var(--line);background:var(--panel);color:var(--text);font:inherit;outline:none;box-shadow:var(--shadow)}.searchbox input:focus{border-color:var(--accent)}.searchbox span{position:absolute;right:19px;top:14px;font-size:20px;color:var(--muted)}
-.section-head{display:flex;align-items:end;justify-content:space-between;margin:25px 0 18px}.section-head h2{font-size:23px;margin:0;font-weight:800}.section-head p{margin:4px 0 0;color:var(--muted);font-size:13px}.count{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:6px 11px;border-radius:30px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.link-card{position:relative;overflow:hidden;min-height:220px;padding:23px;border:1px solid var(--line);border-radius:23px;background:linear-gradient(145deg,var(--panel),var(--panel2));box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .22s,border-color .22s}.link-card:hover{transform:translateY(-5px);border-color:rgba(124,92,255,.55)}.link-card:before{content:"";position:absolute;width:150px;height:150px;border-radius:50%;background:var(--glow,rgba(124,92,255,.12));filter:blur(35px);left:-55px;top:-65px;pointer-events:none}
-.card-top{display:flex;align-items:center;justify-content:space-between;position:relative}.card-icon{width:54px;height:54px;border-radius:17px;display:grid;place-items:center;font-size:25px;background:var(--iconbg,rgba(124,92,255,.16))}
-.tag{font-size:11px;color:var(--muted);background:rgba(255,255,255,.05);border:1px solid var(--line);padding:5px 9px;border-radius:20px}
-.link-card h3{font-size:19px;margin:19px 0 5px;position:relative}.link-card p{color:var(--muted);font-size:13px;line-height:1.8;margin:0 0 20px;position:relative}
-.card-link{margin-top:auto;display:flex;align-items:center;justify-content:space-between;text-decoration:none;color:var(--text);font-size:13px;font-weight:800;padding-top:13px;border-top:1px solid var(--line);position:relative}.arrow{width:30px;height:30px;border-radius:10px;background:rgba(124,92,255,.18);display:grid;place-items:center;color:#b9aaff;font-size:18px;transition:.2s}.card-link:hover .arrow{transform:translateX(-4px);background:var(--accent);color:white}
-.coming{border-style:dashed;background:linear-gradient(145deg,rgba(49,214,208,.07),var(--panel));}.coming .card-icon{background:rgba(49,214,208,.13)}.coming .tag{color:#55dcd5;border-color:rgba(49,214,208,.22)}.coming .card-link{color:var(--muted)}.coming .arrow{background:rgba(49,214,208,.12);color:#55dcd5}
-.community{margin:44px 0 65px;padding:27px;border:1px solid var(--line);border-radius:25px;background:linear-gradient(115deg,rgba(124,92,255,.13),rgba(49,214,208,.07));display:flex;align-items:center;justify-content:space-between;gap:20px}.community h2{font-size:21px;margin:0 0 5px}.community p{color:var(--muted);margin:0;font-size:13px}.join{white-space:nowrap;text-decoration:none;background:linear-gradient(110deg,#7c5cff,#4a8dff);color:#fff;padding:12px 20px;border-radius:13px;font-size:13px;font-weight:800;box-shadow:0 9px 25px #7c5cff44}
-footer{border-top:1px solid var(--line);padding:23px 0 30px;text-align:center;color:var(--muted);font-size:12px}footer strong{color:var(--text)}
-.empty{display:none;text-align:center;padding:35px;color:var(--muted);grid-column:1/-1}
-@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.hero{padding:55px 0 30px}}
-@media(max-width:560px){.wrap{width:min(100% - 26px,1100px)}header{height:70px}.brand{font-size:21px}.logo{width:39px;height:39px}.hero{padding:48px 0 25px}.hero p{font-size:14px}.grid{grid-template-columns:1fr;gap:13px}.link-card{min-height:195px;padding:20px}.community{align-items:flex-start;flex-direction:column;padding:22px}.join{width:100%;text-align:center}.section-head h2{font-size:20px}}
-</style>
-</head>
-<body>
-<div class="wrap">
-<header>
-  <div class="brand"><div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.1 0l3-3a5 5 0 0 0-7.1-7.1l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.1 0l-3 3A5 5 0 0 0 7 21.1l1.7-1.7"/></svg></div>لينكاتي</div>
-  <div class="actions"><button class="icon-btn" id="themeBtn" aria-label="تغيير الوضع">☀</button></div>
-</header>
+:root{--bg:#090d19;--panel:#111a2b;--panel2:#172238;--text:#f5f7ff;--muted:#9aa8bf;--line:#ffffff16;--purple:#8b6cff;--mint:#42d9c8;--shadow:0 24px 65px #0005}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 80% 0%,#7552ff35,transparent 40%),radial-gradient(ellipse at 0% 55%,#22b8a522,transparent 32%),var(--bg);color:var(--text);font-family:Cairo,sans-serif;transition:.25s}
+body.light{--bg:#f2f5fc;--panel:#fff;--panel2:#f7f8ff;--text:#17213a;--muted:#69758c;--line:#17213a18;--shadow:0 20px 55px #40508018;background:radial-gradient(ellipse at 80% 0%,#9a80ff25,transparent 40%),#f2f5fc}
+.wrap{width:min(1100px,calc(100% - 34px));margin:auto}header{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;font-size:24px;font-weight:900}.logo{width:44px;height:44px;border-radius:15px;background:linear-gradient(140deg,#a58dff,#586ff4 60%,#41d9cb);display:grid;place-items:center;box-shadow:0 9px 28px #795bff55}.logo svg{width:24px}
+.theme{width:42px;height:42px;border:1px solid var(--line);border-radius:14px;background:var(--panel);color:var(--text);font-size:18px;cursor:pointer}
+.hero{text-align:center;padding:64px 0 34px}.eyebrow{display:inline-block;padding:7px 15px;border:1px solid #967aff55;border-radius:30px;background:#8765ff17;color:#c7baff;font-size:12px;font-weight:800}.hero h1{font-size:clamp(42px,7vw,72px);line-height:1.2;margin:18px 0 10px;font-weight:900;letter-spacing:-1.5px}.grad{background:linear-gradient(95deg,#b49cff,#54e0d4);background-clip:text;-webkit-background-clip:text;color:transparent}.hero p{max-width:590px;margin:auto;color:var(--muted);font-size:15px;line-height:2}
+.bot-banner{max-width:930px;margin:5px auto 0;padding:21px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-decoration:none;border:1px solid #4b9dff55;border-radius:22px;background:linear-gradient(105deg,#317fff27,#35d9c81a),var(--panel);box-shadow:0 17px 50px #2875d51b;transition:.25s;position:relative;overflow:hidden}.bot-banner:hover{transform:translateY(-3px);border-color:#58b8ff}.bot-info{display:flex;align-items:center;gap:14px}.bot-icon{width:54px;height:54px;flex:0 0 54px;border-radius:17px;background:linear-gradient(140deg,#319dff,#586bf1);display:grid;place-items:center;font-size:27px;box-shadow:0 8px 25px #348cff55}.bot-info strong{display:block;font-size:16px;font-weight:900;color:var(--text)}.bot-info small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.bot-cta{white-space:nowrap;padding:10px 15px;border-radius:12px;background:linear-gradient(100deg,#448fff,#596bf4);color:white;font-size:12px;font-weight:900}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:43px 0 18px}.section-head h2{margin:0;font-size:23px;font-weight:900}.section-head p{margin:4px 0 0;color:var(--muted);font-size:12px}.search{position:relative;width:290px}.search input{width:100%;height:45px;border:1px solid var(--line);border-radius:14px;background:var(--panel);color:var(--text);font:inherit;font-size:12px;padding:0 42px 0 12px;outline:none}.search input:focus{border-color:var(--purple)}.search span{position:absolute;right:14px;top:7px;color:var(--muted);font-size:20px}
+.deck-wrap{max-width:830px;margin:auto}.deck{height:345px;position:relative;overflow:hidden;touch-action:pan-y;user-select:none}.card{position:absolute;top:8px;left:12%;width:76%;height:310px;padding:25px 27px 22px;border:1px solid var(--line);border-radius:27px;background:linear-gradient(145deg,var(--panel),var(--panel2));box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden;transition:transform .43s cubic-bezier(.2,.8,.2,1),opacity .32s,filter .32s;transform-origin:center 85%;cursor:grab}.card:before{content:"";position:absolute;width:220px;height:220px;left:-100px;top:-130px;border-radius:50%;background:var(--glow,#8765ff55);filter:blur(45px);pointer-events:none}.card:active{cursor:grabbing}.card:not(.is-active) .card-head,.card:not(.is-active) h3,.card:not(.is-active) p,.card:not(.is-active) .card-bottom{opacity:0;visibility:hidden}.card:not(.is-active):before{opacity:.25}.card-head{display:flex;align-items:center;justify-content:space-between;position:relative}.card-icon{width:61px;height:61px;border-radius:19px;display:grid;place-items:center;font-size:28px;background:var(--iconbg,#8765ff22);border:1px solid #ffffff10}.tag{padding:6px 11px;border:1px solid var(--line);border-radius:30px;color:var(--muted);font-size:11px;background:#ffffff08}.card h3{position:relative;font-size:23px;line-height:1.55;margin:23px 0 7px;font-weight:900}.card p{position:relative;color:var(--muted);font-size:13px;line-height:1.9;margin:0;max-width:520px}.card-bottom{position:relative;margin-top:auto;padding-top:15px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.card-bottom>span{font-size:11px;color:var(--muted)}.open{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:12px;font-weight:900}.open b{width:34px;height:34px;border-radius:11px;background:linear-gradient(140deg,var(--purple),#5d8fff);color:white;display:grid;place-items:center;font-size:18px;transition:.2s}.open:hover b{transform:translateX(-4px)}.coming{border-style:dashed;background:linear-gradient(145deg,#35d9c815,var(--panel))}.coming .tag{color:#50d8ce;border-color:#35d9c844}.coming .card-icon{background:#35d9c822}.coming .open{color:var(--muted)}
+.dots{display:flex;justify-content:center;gap:7px;margin:9px 0}.dots i{width:6px;height:6px;border-radius:20px;background:var(--muted);opacity:.35;transition:.2s}.dots i.active{width:22px;opacity:1;background:linear-gradient(90deg,var(--purple),var(--mint))}.hint{text-align:center;color:var(--muted);font-size:11px}.empty{display:none;text-align:center;padding:25px;color:var(--muted)}
+.community{margin:43px 0 55px;padding:24px 26px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(110deg,#8765ff1c,#35d9c812),var(--panel);display:flex;align-items:center;justify-content:space-between;gap:16px}.community h2{font-size:19px;margin:0 0 4px}.community p{font-size:12px;color:var(--muted);margin:0}.join{white-space:nowrap;text-decoration:none;padding:11px 17px;border-radius:12px;background:#168c68;color:white;font-size:12px;font-weight:900}
+footer{text-align:center;border-top:1px solid var(--line);padding:22px 0 28px;color:var(--muted);font-size:11px;line-height:2}footer strong{color:var(--text)}
+@media(max-width:650px){.wrap{width:calc(100% - 26px)}header{height:70px}.brand{font-size:21px}.hero{padding:48px 0 27px}.hero p{font-size:13px}.bot-banner{padding:16px;border-radius:18px}.bot-icon{width:46px;height:46px;flex-basis:46px;font-size:23px}.bot-info strong{font-size:13px}.bot-info small{font-size:10px}.bot-cta{font-size:10px;padding:9px}.section-head{align-items:flex-start;flex-direction:column;margin-top:35px}.section-head h2{font-size:20px}.search{width:100%}.deck{height:323px}.card{left:3%;width:94%;height:292px;padding:20px;border-radius:23px}.card h3{font-size:20px;margin-top:19px}.card p{font-size:12px}.community{align-items:flex-start;flex-direction:column;padding:20px}.join{width:100%;text-align:center}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head>
+<body><div class="wrap">
+<header><div class="brand"><div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round"><path d="M10 13a5 5 0 0 0 7.1 0l3-3a5 5 0 0 0-7.1-7.1l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.1 0l-3 3A5 5 0 0 0 7 21.1l1.7-1.7"/></svg></div>لينكاتي</div><button class="theme" id="theme" aria-label="تغيير الوضع">☀</button></header>
 <main>
-<section class="hero">
-  <span class="eyebrow">✦ كل روابطك في مكان واحد</span>
-  <h1>أهلاً بك في <span class="gradient">لينكاتي</span></h1>
-  <p>وجهتك السريعة لكل المنصات والخدمات التعليمية. اختار اللي محتاجه وابدأ رحلتك.</p>
-  <div class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="ابحث عن منصة أو خدمة..." autocomplete="off"></div>
-</section>
-<section>
-  <div class="section-head"><div><h2>روابطنا ومنصاتنا</h2><p>اختصارات مهمة، منظمة علشان توصل أسرع</p></div><span class="count">3 روابط متاحة</span></div>
-  <div class="grid" id="cards">
-    <article class="link-card" data-search="امتحانات منصة امتحانات اختبارات form x elite">
-      <div class="card-top"><div class="card-icon">📝</div><span class="tag">منصة امتحانات</span></div>
-      <h3>منصة امتحانات قوية</h3><p>ادخل إلى منصة الامتحانات وابدأ اختبارك بسهولة.</p>
-      <a class="card-link" href="https://form-x-elite.base44.app/" target="_blank" rel="noopener noreferrer"><span>زيارة المنصة</span><span class="arrow">←</span></a>
-    </article>
-    <article class="link-card" data-search="المنصة الأساسية الرسمية مكتبة boocs">
-      <div class="card-top"><div class="card-icon">🏛️</div><span class="tag">المنصة الرسمية</span></div>
-      <h3>منصتنا الأساسية والرسمية</h3><p>الموقع الرئيسي الخاص بنا، ومكتبتنا التعليمية المعتمدة.</p>
-      <a class="card-link" href="https://boocs-bbcaloria.vercel.app/" target="_blank" rel="noopener noreferrer"><span>زيارة المنصة</span><span class="arrow">←</span></a>
-    </article>
-    <article class="link-card" data-search="كيريو الثقافة المالية البرمجة حل منصة javascript python">
-      <div class="card-top"><div class="card-icon">💻</div><span class="tag">حل المنصات</span></div>
-      <h3>حل منصة كيريو والثقافة المالية</h3><p>الوصول إلى حلول منصة كيريو ومنصة الثقافة المالية.</p>
-      <a class="card-link" href="https://mhmdrmdanalhrbawy03-glitch.github.io/Exam-mohamed-alherbawy/" target="_blank" rel="noopener noreferrer"><span>فتح صفحة الحلول</span><span class="arrow">←</span></a>
-    </article>
-    <article class="link-card" data-search="جروب ثانية بكالوريا واتساب طلاب">
-      <div class="card-top"><div class="card-icon">👥</div><span class="tag">مجتمع الطلاب</span></div>
-      <h3>جروب تانية بكالوريا</h3><p>انضم إلى مجموعة الطلاب على واتساب لمتابعة كل جديد.</p>
-      <a class="card-link" href="https://chat.whatsapp.com/ENBgzShGqNdLmaxt9V8Pny" target="_blank" rel="noopener noreferrer"><span>الانضمام للجروب</span><span class="arrow">←</span></a>
-    </article>
-    <article class="link-card coming" data-search="قناة واتساب قريبا قريباً">
-      <div class="card-top"><div class="card-icon">📢</div><span class="tag">قريباً جداً</span></div>
-      <h3>قناة الواتساب</h3><p>مساحة مخصصة للإعلانات والتنبيهات وآخر التحديثات. انتظرونا قريباً جداً.</p>
-      <div class="card-link"><span>سيتم إضافة الرابط قريباً</span><span class="arrow">…</span></div>
-    </article>
-    <article class="link-card coming" data-search="قناة تلجرام تليجرام telegram قريبا قريباً">
-      <div class="card-top"><div class="card-icon">✈️</div><span class="tag">قريباً جداً</span></div>
-      <h3>قناة التليجرام</h3><p>تابعوا القناة للحصول على الملفات والروابط والتحديثات القادمة.</p>
-      <div class="card-link"><span>سيتم إضافة الرابط قريباً</span><span class="arrow">…</span></div>
-    </article>
-    <div class="empty" id="empty">لا توجد نتائج مطابقة لبحثك.</div>
-  </div>
-</section>
-<section class="community">
-  <div><h2>خليك قريب من مجتمعنا ✨</h2><p>انضم إلى جروب تانية بكالوريا وكن أول من يعرف التحديثات.</p></div>
-  <a class="join" href="https://chat.whatsapp.com/ENBgzShGqNdLmaxt9V8Pny" target="_blank" rel="noopener noreferrer">انضم إلى الجروب الآن ←</a>
-</section>
-</main>
-<footer>© 2026 لينكاتي | جميع الحقوق محفوظة<br><strong>برعاية محمد رمضان الحرباوي</strong></footer>
-</div>
+<section class="hero"><span class="eyebrow">✦ بوابتك الرقمية لكل الروابط</span><h1>كل روابطك،<br><span class="grad">في مكان واحد.</span></h1><p>منصاتنا التعليمية وخدماتنا وروابط مجتمعنا — تجربة منظمة وسريعة بتصميم عصري.</p></section>
+<a class="bot-banner" href="https://t.me/QureoegBOT?startapp=r7666228175" target="_blank" rel="noopener noreferrer"><div class="bot-info"><div class="bot-icon">🤖</div><div><strong>رابط بوت حل منصات البرمجة مجاناً</strong><small>افتح البوت على تيليجرام وابدأ الاستخدام مجاناً</small></div></div><span class="bot-cta">افتح البوت ↗</span></a>
+<section><div class="section-head"><div><h2>اختار وجهتك</h2><p>اسحب البطاقة الحالية يميناً أو يساراً للتنقل بين الروابط</p></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="ابحث عن رابط..." autocomplete="off"></label></div>
+<div class="deck-wrap"><div class="deck" id="deck">
+<article class="card" data-keys="امتحانات اختبارات منصة form x elite" style="--glow:#8564ff55;--iconbg:#8564ff22"><div class="card-head"><div class="card-icon">📝</div><span class="tag">منصة امتحانات</span></div><h3>منصة امتحانات قوية</h3><p>ادخل إلى منصة الامتحانات وابدأ اختبارك بسهولة، وتابع تجربتك التعليمية من مكان واحد.</p><div class="card-bottom"><span>منصات تعليمية</span><a class="open" href="https://form-x-elite.base44.app/" target="_blank" rel="noopener noreferrer">زيارة المنصة <b>←</b></a></div></article>
+<article class="card" data-keys="المنصة الأساسية الرسمية المكتبة boocs" style="--glow:#398cff55;--iconbg:#398cff22"><div class="card-head"><div class="card-icon">🏛️</div><span class="tag">المنصة الرسمية</span></div><h3>منصتنا الأساسية والرسمية</h3><p>الموقع الرئيسي الخاص بنا ومكتبتنا التعليمية — وجهتك الأساسية للمحتوى والخدمات.</p><div class="card-bottom"><span>الموقع الرسمي</span><a class="open" href="https://boocs-bbcaloria.vercel.app/" target="_blank" rel="noopener noreferrer">زيارة المنصة <b>←</b></a></div></article>
+<article class="card" data-keys="كيريو الثقافة المالية حل البرمجة javascript python" style="--glow:#23bda855;--iconbg:#23bda822"><div class="card-head"><div class="card-icon">💻</div><span class="tag">حل المنصات</span></div><h3>حل منصة كيريو والثقافة المالية</h3><p>الوصول إلى حلول منصة كيريو ومنصة الثقافة المالية في صفحة واحدة.</p><div class="card-bottom"><span>مساعدة تعليمية</span><a class="open" href="https://mhmdrmdanalhrbawy03-glitch.github.io/Exam-mohamed-alherbawy/" target="_blank" rel="noopener noreferrer">فتح الحلول <b>←</b></a></div></article>
+<article class="card" data-keys="جروب ثانية بكالوريا واتساب طلاب" style="--glow:#22c77a55;--iconbg:#22c77a22"><div class="card-head"><div class="card-icon">👥</div><span class="tag">مجتمع الطلاب</span></div><h3>جروب تانية بكالوريا</h3><p>انضم إلى مجموعة الطلاب على واتساب لمتابعة الأخبار والتواصل مع مجتمعنا.</p><div class="card-bottom"><span>مجتمع واتساب</span><a class="open" href="https://chat.whatsapp.com/ENBgzShGqNdLmaxt9V8Pny" target="_blank" rel="noopener noreferrer">انضم للجروب <b>←</b></a></div></article>
+<article class="card" data-keys="موقعي الشخصي الموقع محمد رمضان الحرباوي" style="--glow:#e6a33e55;--iconbg:#e6a33e22"><div class="card-head"><div class="card-icon">🌐</div><span class="tag">موقعنا</span></div><h3>الموقع الشخصي</h3><p>انتقل إلى الموقع الخاص بنا واكتشف المزيد من الأعمال والخدمات.</p><div class="card-bottom"><span>الموقع الشخصي</span><a class="open" href="https://mhmdrmdan.yobader.com/" target="_blank" rel="noopener noreferrer">زيارة الموقع <b>←</b></a></div></article>
+<article class="card coming" data-keys="قناة واتساب قريبا قريباً" style="--glow:#25c6a755"><div class="card-head"><div class="card-icon">📢</div><span class="tag">قريباً جداً</span></div><h3>قناة الواتساب</h3><p>قناة مخصصة للإعلانات والتنبيهات وآخر التحديثات. انتظرونا قريباً جداً.</p><div class="card-bottom"><span>سيتم الإعلان عنها قريباً</span><span class="open">قريباً <b>…</b></span></div></article>
+<article class="card coming" data-keys="قناة تلجرام تليجرام telegram قريبا قريباً" style="--glow:#339dff55"><div class="card-head"><div class="card-icon">✈️</div><span class="tag">قريباً جداً</span></div><h3>قناة التليجرام</h3><p>تابعوا القناة للحصول على الملفات والروابط والتحديثات القادمة.</p><div class="card-bottom"><span>سيتم الإعلان عنها قريباً</span><span class="open">قريباً <b>…</b></span></div></article>
+</div><div class="dots" id="dots"></div><div class="hint">اسحب البطاقة يميناً أو يساراً لتبديل الطبقات</div><div class="empty" id="empty">لا توجد روابط مطابقة لبحثك.</div></div></section>
+<section class="community"><div><h2>مجتمع تانية بكالوريا ✨</h2><p>انضم إلى جروب الطلاب وكن قريباً من كل جديد.</p></div><a class="join" href="https://chat.whatsapp.com/ENBgzShGqNdLmaxt9V8Pny" target="_blank" rel="noopener noreferrer">انضم إلى الجروب ↗</a></section>
+</main><footer>© 2026 لينكاتي — جميع الحقوق محفوظة<br><strong>برعاية محمد رمضان الحرباوي</strong></footer></div>
 <script>
-const themeBtn=document.getElementById('themeBtn');
-themeBtn.addEventListener('click',()=>{document.body.classList.toggle('light');themeBtn.textContent=document.body.classList.contains('light')?'☾':'☀';});
-const search=document.getElementById('search'), cards=[...document.querySelectorAll('.link-card')], empty=document.getElementById('empty');
-search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();let shown=0;cards.forEach(card=>{const match=(card.innerText+' '+card.dataset.search).toLowerCase().includes(q);card.style.display=match?'flex':'none';if(match)shown++;});empty.style.display=shown?'none':'block';});
-</script>
-</body>
-</html>
+const body=document.body,theme=document.getElementById('theme');theme.addEventListener('click',()=>{body.classList.toggle('light');theme.textContent=body.classList.contains('light')?'☾':'☀';});
+const deck=document.getElementById('deck'),search=document.getElementById('search'),dots=document.getElementById('dots'),empty=document.getElementById('empty');let all=[...deck.querySelectorAll('.card')],visible=[],active=0,startX=0,lastX=0,dragging=false;
+function render(){let q=search.value.trim().toLowerCase();visible=all.filter(c=>(c.innerText+' '+c.dataset.keys).toLowerCase().includes(q));all.forEach(c=>c.style.display=visible.includes(c)?'flex':'none');active=Math.min(active,Math.max(0,visible.length-1));empty.style.display=visible.length?'none':'block';deck.style.display=visible.length?'block':'none';dots.innerHTML='';visible.forEach((_,i)=>{let d=document.createElement('i');if(i===active)d.className='active';dots.appendChild(d)});layout();}
+function layout(){visible.forEach((card,i)=>{let off=i-active;if(off>visible.length/2)off-=visible.length;if(off< -visible.length/2)off+=visible.length;let n=Math.abs(off);card.classList.toggle('is-active',n===0);card.style.zIndex=50-n;card.style.opacity=n>2?'0':n===0?'1':'.48';card.style.pointerEvents=n===0?'auto':'none';card.style.filter=n===0?'none':'brightness(.78) saturate(.72)';card.style.transform=n===0?'translate(0,0) rotate(0) scale(1)':`translate(${off*15}px,${n*17}px) rotate(${off*1.2}deg) scale(${1-n*.035})`;});[...dots.children].forEach((d,i)=>d.classList.toggle('active',i===active));}
+function advance(dir){if(visible.length<2)return;active=(active+dir+visible.length)%visible.length;layout();}
+deck.addEventListener('pointerdown',e=>{if(e.target.closest('a'))return;dragging=true;startX=lastX=e.clientX;});deck.addEventListener('pointermove',e=>{if(dragging)lastX=e.clientX;});function release(){if(!dragging)return;dragging=false;let dx=lastX-startX;if(Math.abs(dx)>35)advance(dx<0?1:-1);}deck.addEventListener('pointerup',release);deck.addEventListener('pointercancel',release);dots.addEventListener('click',e=>{let i=[...dots.children].indexOf(e.target);if(i>=0){active=i;layout();}});search.addEventListener('input',()=>{active=0;render();});render();
+</script></body></html>
